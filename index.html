@@ -123,7 +123,7 @@
 
     <div id="confirmation" class="container booking-form">
        <h1><span class="text-success">Thank you!</span></h1>
-        <h3>You have purchased <span id="ticket-information"></span></h3>
+        <h3 class="text-warning">You have purchased <span id="ticket-information"></span></h3>
     </div>
 
     <script>
@@ -142,6 +142,7 @@
            calculateTicketCost();
             
         }
+
 
         function calculateTicketCost(){
             var firstClass = getTicketInput("firstClass");
@@ -173,6 +174,8 @@
             const inputNumber = parseInt(ticketInput.value);
             return inputNumber;
         }
+
+
         document.getElementById("buy-button").addEventListener("click", function(){
             document.getElementById("booking").style.display = "none";
             document.getElementById("confirmation").style.display = "block"
